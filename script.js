@@ -38,19 +38,50 @@ if (personalMovieDB.count < 10) {
 const moviesName = [],
       moviesMark = [];
 
-outer: for (let i = 1; i < 3; i++) {
+ for (let i = 1; i < 3; i++) {
 
-    moviesName[i] = prompt('One of the last seens film?', '');
-    moviesMark[i] = prompt('Whats your mark?', '');
+     moviesName[i] = prompt('One of the last seens film?', '');
+     moviesMark[i] = prompt('Whats your mark?', '');
     
-    if (moviesName[i].length < 50 && moviesName[i] != '' && moviesName[i] != null && moviesMark[i] != '') {
+     if (moviesName[i].length < 50 && moviesName[i] != '' && moviesName[i] != null && moviesMark[i] != '') {
         
         personalMovieDB.movies[moviesName[i]] = moviesMark[i];
 
-        } else {
-            i--;
-    }
+         } else {
+             i--;
+     }
 };
+
+
+// let i = 1;
+// while (i < 3) {
+
+//     moviesName[i] = prompt('One of the last seens film?', '');
+//     moviesMark[i] = prompt('Whats your mark?', ''); 
+
+//     if (moviesName[i].length < 50 && moviesName[i] != '' && moviesName[i] != null && moviesMark[i] != '') {
+        
+//         personalMovieDB.movies[moviesName[i]] = moviesMark[i];
+//         console.log('done');
+//         i++;
+
+//         } else if ( i == 1) {
+            
+//             console.log('fail');
+//             i = 1;
+
+//         } else if ( i == 2) {
+            
+//             console.log('fail');
+//             i = 2;
+
+//         } else {
+
+//             console.log('fail');
+//             i--;
+
+//         }
+//     };
 
 console.log(personalMovieDB);
 
